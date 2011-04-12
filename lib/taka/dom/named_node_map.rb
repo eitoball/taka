@@ -5,7 +5,7 @@ module Taka
 
       def getNamedItem name
         item = self[name]
-        return item unless item
+        item = Nokogiri::XML::Attr.new(self.document, '') unless item
         document.decorate(item)
       end
 

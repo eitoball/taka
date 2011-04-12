@@ -2,7 +2,7 @@ module Taka
   module DOM
     module Attr
       def specified
-        true
+        ! self.name.empty?
       end
 
       def parentNode
